@@ -408,6 +408,11 @@ async function transitionToNextPage() {
   }
 }
     loadData();
+    setInterval(() => {
+      const event = new Event('mousemove');
+      document.dispatchEvent(event);
+      console.log("Keep-alive event dispatched.");
+    }, 60000); // every 60 seconds
   </script>
 </body>
 
